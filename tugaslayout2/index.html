@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>layout1new</title>
+        <style>
+
+        .luar {
+            position: relative;
+            width: 1000px;
+            height: 540px;
+            background-color: #efefef;
+            margin: 10px auto;
+        }
+
+        .baris {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: #dedede;
+        }
+
+        .baris:nth-child(5) {
+            margin-bottom: 0px;
+        }
+
+        .fullcol {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;   
+        }
+        
+        .halfcol,
+        .half_width_content {
+            position: relative;
+            width: 45%;
+            height: 100%;
+            background-color: #bbb;  
+            margin-right: 5%;
+            float: left;
+        }
+
+        .halfcol:nth-child(even),
+        .half_width_content:nth-child(even) {
+            margin-right: 0;
+            margin-left: 5%;
+        }
+        
+        .baris:nth-child(3) .halfcol {
+            width: 65%; 
+        }
+
+        .baris:nth-child(3) .halfcol:nth-child(even) {
+            width: 25%;
+        }
+
+        .baris:nth-child(5) .halfcol {
+            width: 65%; 
+        }
+
+        .baris:nth-child(5) .halfcol:nth-child(even) {
+            width: 25%;
+        }
+
+        .full_width_content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: burlywood;
+        }
+
+        .half_width_content{
+            background-color: cornflowerblue;
+
+        }
+
+        .quarter_width_content {
+            position: relative;
+            width: 22%;
+            height: 100%;
+            margin-right: 4;
+            background-color: crimson;
+            float: left;
+        }
+
+
+     </style>
+</head>
+<body>
+ 
+    <div class="luar">
+
+            <div class="baris">
+                <div class="fullcol">
+                    <div class="full_width_content"></div>
+                </div>
+            </div>
+
+            <div class="baris">
+                <div class="fullcol">
+                    <div class="quarter_width_content"></div> 
+                    <div class="quarter_width_content"></div> 
+                    <div class="quarter_width_content"></div> 
+                    <div class="quarter_width_content"></div> 
+                </div>
+            </div>
+
+        <div class="baris">
+            <div class="halfcol">
+                <div class="half_width_content"></div>
+                <div class="half_width_content"></div>
+            </div>
+            <div class="halfcol">
+                <div class="half_width_content"></div>
+                <div class="half_width_content"></div>
+            </div>
+        </div>
+        
+        <div class="baris">
+            <div class="halfcol">
+                <div class="full_width_content"></div>
+            </div>
+            <div class="halfcol">
+                <div class="full_width_content"></div>
+        </div>
+     </div>
+     
+     <div class="baris">
+            <div class="halfcol">
+                <div class="full_width_content"></div>
+            </div>
+            <div class="halfcol">
+                <div class="full_width_content"></div>
+            </div>
+        </div>
+
+
+        
+    </div>
+</body>
+</html>
